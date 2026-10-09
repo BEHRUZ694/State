@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>StateWars – conquer maps with friends</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- MENU -->
+<div id="menu" class="screen">
+  <h1>⚔️ StateWars</h1>
+  <p class="sub">Conquer the map. Play online with friends.</p>
+  <div class="card">
+    <label>Your name</label>
+    <input id="name" maxlength="14" placeholder="Player">
+    <button id="btnCreate" class="primary">Create room</button>
+    <div class="row">
+      <input id="joinCode" maxlength="5" placeholder="ROOM CODE" autocapitalize="characters">
+      <button id="btnJoin">Join</button>
+    </div>
+    <button id="btnSolo">Play vs bots</button>
+    <p id="menuStatus" class="status"></p>
+  </div>
+  <div class="card small">
+    <b>How to play</b><br>
+    Drag from your city to another city to send troops. Or tap your cities (select several), then tap a target.
+    Bigger cities make troops faster. Wipe out everyone else to win.
+  </div>
+</div>
+
+<!-- LOBBY -->
+<div id="lobby" class="screen hidden">
+  <h2>Lobby</h2>
+  <div class="card">
+    <div id="roomBox">
+      <label>Room code</label>
+      <div class="codeRow"><span id="roomCode">-----</span><button id="btnShare">Share link</button></div>
+    </div>
+    <label>Players</label>
+    <ul id="players"></ul>
+    <label>Map</label>
+    <div id="maps" class="maps"></div>
+    <canvas id="preview" width="500" height="320"></canvas>
+    <div class="row between">
+      <span>Bots: <b id="botN">0</b></span>
+      <span><button id="botMinus" class="sq">−</button> <button id="botPlus" class="sq">+</button></span>
+    </div>
+    <button id="btnStart" class="primary">Start game</button>
+    <button id="btnLobbyLeave">Leave</button>
+    <p id="lobbyStatus" class="status"></p>
+  </div>
+</div>
+
+<!-- GAME -->
+<div id="game" class="screen hidden">
+  <div id="hud"></div>
+  <canvas id="cv"></canvas>
+  <div id="bar">
+    <button id="btnFrac">Send: 100%</button>
+    <button id="btnLeave">Leave</button>
+  </div>
+  <div id="result" class="hidden">
+    <div class="card">
+      <h2 id="resultText"></h2>
+      <button id="btnBack" class="primary">Back to lobby</button>
+    </div>
+  </div>
+</div>
+
+<script src="https://unpkg.com/peerjs@1.5.4/dist/peerjs.min.js"></script>
+<script src="maps.js"></script>
+<script src="game.js"></script>
+</body>
+</html>

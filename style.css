@@ -1,0 +1,39 @@
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;height:100%;background:#0b1220;color:#e6edf7;font:15px/1.4 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;overflow:hidden}
+.hidden{display:none!important}
+.screen{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;padding:16px;overflow:auto}
+#game{padding:0;align-items:stretch;overflow:hidden}
+h1{margin:14px 0 0;font-size:32px}
+h2{margin:8px 0 0}
+.sub{color:#93a4bf;margin:4px 0 8px}
+.card{width:100%;max-width:460px;background:#131c2e;border:1px solid #223049;border-radius:16px;padding:16px;margin-top:12px}
+.card.small{font-size:13px;color:#a8b6cc}
+label{display:block;font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:#7f90ac;margin:10px 0 6px}
+input{width:100%;padding:12px;border-radius:10px;border:1px solid #2b3a57;background:#0d1627;color:#fff;font-size:16px}
+button{padding:12px 14px;border-radius:10px;border:1px solid #2b3a57;background:#1a2640;color:#e6edf7;font-size:15px;cursor:pointer;margin-top:10px;width:100%}
+button:active{transform:scale(.98)}
+button:disabled{opacity:.45}
+button.primary{background:#3b6dff;border-color:#3b6dff;font-weight:600}
+button.sq{width:44px;margin:0;padding:8px}
+.row{display:flex;gap:8px;align-items:center;margin-top:10px}
+.row input{flex:1}.row button{width:auto;margin:0}
+.row.between{justify-content:space-between}
+.status{min-height:20px;margin:10px 0 0;color:#ffb86b;font-size:13px}
+.codeRow{display:flex;gap:10px;align-items:center}
+.codeRow button{width:auto;margin:0}
+#roomCode{font-size:30px;font-weight:700;letter-spacing:.2em;flex:1}
+#players{list-style:none;margin:0;padding:0}
+#players li{padding:7px 0;display:flex;align-items:center;gap:8px;border-bottom:1px solid #1d2a44}
+.dot{width:12px;height:12px;border-radius:50%;display:inline-block}
+.maps{display:flex;flex-wrap:wrap;gap:6px}
+.maps button{width:auto;margin:0;padding:8px 10px;font-size:14px}
+.maps button.on{background:#3b6dff;border-color:#3b6dff}
+#preview{width:100%;height:auto;background:#0d1627;border-radius:10px;margin-top:10px}
+#hud{display:flex;gap:6px;flex-wrap:wrap;padding:6px 8px;background:#0f1729;border-bottom:1px solid #1d2a44;font-size:12px}
+.chip{display:flex;align-items:center;gap:5px;padding:3px 8px;border-radius:999px;background:#18233b}
+.chip.dead{opacity:.35;text-decoration:line-through}
+#cv{flex:1;width:100%;min-height:0;touch-action:none;display:block;background:#0b1220}
+#bar{display:flex;gap:8px;padding:8px;background:#0f1729;border-top:1px solid #1d2a44}
+#bar button{margin:0}
+#result{position:absolute;inset:0;background:rgba(5,8,15,.8);display:flex;align-items:center;justify-content:center;padding:16px}
+#result .card{text-align:center}
